@@ -31,6 +31,10 @@ import javax.servlet.ServletResponse;
 //
 public class Filter01 implements Filter {
 
+  public Filter01() {
+    System.out.println("FIlter()");
+  }
+
   @Override
   public void init(FilterConfig filterConfig) throws ServletException {
     // 웹 애플리케이션을 시작할 때 필터 객체를 생성한다.
