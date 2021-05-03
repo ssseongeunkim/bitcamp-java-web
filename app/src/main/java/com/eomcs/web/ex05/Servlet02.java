@@ -17,7 +17,7 @@ public class Servlet02 extends MyHttpServlet {
   protected void service(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
     // 테스트
-    // - http://localhost:8080/java-web/ex05/test02.html 실행
+    // - http://localhost:8080/web/ex05/test02.html 실행
     //
     response.setContentType("text/plain;charset=UTF-8");
     PrintWriter out = response.getWriter();

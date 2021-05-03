@@ -20,14 +20,10 @@ import javax.servlet.annotation.WebServlet;
 //@WebServlet(value="/ex01/s04")
 //@WebServlet(urlPatterns="/ex01/s04")
 //@WebServlet(urlPatterns={"/ex01/s04"})
-@WebServlet(urlPatterns={"/ex01/s04", "/ex01/hoho", "/hoho2"})
+@WebServlet(urlPatterns={"/ex01/s04","/ex01/hoho","/hoho2"})
 public class Servlet04 extends GenericServlet {
 
   private static final long serialVersionUID = 1L;
-
-  public Servlet04() {
-    System.out.println("Servlet04()");
-  }
 
   @Override
   public void service(ServletRequest req, ServletResponse res)

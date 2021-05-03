@@ -11,26 +11,26 @@ import javax.servlet.annotation.WebServlet;
 
 // 서블릿 클래스를 만든 후, 서블릿 컨테이너에 등록해야만 사용할 수 있다.
 // 등록 방법 1)
-//   웹 애플리케이션 배치 파일(web.xml; DD 파일)에 서블릿 정보를 등록하기
+//   웹 애플리케이션 배치 파일(web.xml; DD 파일)에 서블릿 정보를 등록한다.
 //   => WEB-INF/web.xml
 //   => DD File: Deployment Descriptor File
 //   => 배치 예:
 //      <servlet>
 //          <servlet-name>서블릿별명</servlet-name>
 //          <servlet-class>서블릿 클래스의 전체이름(패키지명 포함)</servlet-class>
-//       </servlet>
+//      </servlet>
 //
 //      <servlet-mapping>
 //          <servlet-name>서블릿별명</servlet-name>
 //          <url-pattern>클라이언트에서 요청할 때 사용할 URL(/로 시작해야 한다.)</url-pattern>
 //      </servlet-mapping>
-//
 // 등록 방법 2)
-//   서블릿 클래스 선언부에 @WebSevlet 애노테이션을 붙인다.
-//   => @webServlet
-//   => @WebServlet(URL)
-//   => @WebServlet(value=URL)
-//   => @WebServlet(urlPatterns={"URL1","URL2"}
+//   서블릿 클래스 선언부에 @WebServlet 애노테이션을 붙인다.
+//   => @WebServlet
+//      @WebServlet(URL)
+//      @WebServlet(value=URL)
+//      @WebServlet(urlPatterns={"URL1", "URL2", ...})
+// 
 // 서블릿 실행 방법
 // => http://서버주소:포트번호/웹애플리케이션이름/서블릿URL
 // 예) http://localhost:8080/eomcs-java-web/ex01/s01
@@ -81,7 +81,6 @@ public class Servlet01 implements Servlet {
     // => 각각의 서블릿 클래스마다 객체는 한 개만 생성된다.
     // => 따라서 각 서블릿에 대해 init()는 한 번만 호출된다.
     this.config = config;
-
     System.out.println("Servlet01.init(ServletConfig)");
   }
 
@@ -91,7 +90,6 @@ public class Servlet01 implements Servlet {
     // 클라이언트가 이 서블릿의 실행을 요청할 때마다 호출된다.
     // 클라이언트가 요청한 작업을 수행한다.
     System.out.println("Servlet01.service(ServletRequest,ServletResponse)");
-    return;
   }
 
   @Override

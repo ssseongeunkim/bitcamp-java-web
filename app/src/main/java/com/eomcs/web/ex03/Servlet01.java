@@ -9,7 +9,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 
-@WebServlet("/ex03/s1") // http://localhost:9999/bitcamp-java-web/ex03/s1
+@WebServlet("/ex03/s1") // http://localhost:8080/web/ex03/s1
 public class Servlet01 extends GenericServlet {
 
   private static final long serialVersionUID = 1L;

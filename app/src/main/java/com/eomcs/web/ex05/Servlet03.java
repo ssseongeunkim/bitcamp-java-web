@@ -20,7 +20,7 @@ public class Servlet03 extends MyHttpServlet2 {
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
     // 테스트
-    // - http://localhost:8080/java-web/ex05/test03.html 실행
+    // - http://localhost:8080/web/ex05/test03.html 실행
     //
     response.setContentType("text/plain;charset=UTF-8");
     PrintWriter out = response.getWriter();

@@ -39,10 +39,6 @@ public class Servlet06_2 extends GenericServlet {
     for (String genre : genres) {
       out.println(genreData[Integer.parseInt(genre)]);
     }
-
-    //    for (String genr : genres) {
-    //      if 
-    //    }
     // 같은 값을 여러 개 입력 받아야 하는 경우
     // 같은 이름을 사용하라.
     // 그러면 위와 같이 한 번에 배열로 그 값들을 받을 수 있다.

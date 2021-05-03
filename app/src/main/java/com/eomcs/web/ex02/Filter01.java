@@ -15,7 +15,20 @@ import javax.servlet.ServletResponse;
 // => javax.servlet.Filter 인터페이스 규칙에 따라 작성한다.
 //
 // 필터 배포하기
-// => DD 파일(web.xml)에 설정하거나 애노테이션으로 설정하면 된다.
+// => DD 파일(web.xml)에 설정하기
+//      <!-- 필터 등록 -->
+//      <filter>
+//          <filter-name>f01</filter-name>
+//          <filter-class>com.eomcs.web.ex02.Filter01</filter-class>
+//      </filter>
+//
+//      <!-- 필터를 적용할 URL 설정 -->
+//      <filter-mapping>
+//          <filter-name>f01</filter-name>
+//          <url-pattern>/ex02/*</url-pattern>
+//      </filter-mapping>
+// => 애노테이션으로 설정하기
+//      @WebFilter(URL)
 //
 // 필터의 용도
 // => 서블릿을 실행하기 전후에 필요한 작업을 수행
@@ -31,14 +44,10 @@ import javax.servlet.ServletResponse;
 //
 public class Filter01 implements Filter {
 
-  public Filter01() {
-    System.out.println("FIlter()");
-  }
-
   @Override
   public void init(FilterConfig filterConfig) throws ServletException {
     // 웹 애플리케이션을 시작할 때 필터 객체를 생성한다.
-    // 이 메서드는 필터 객체를 생성한 후 자동으로 호출딘다.
+    // 이 메서드는 필터 객체를 생성한 후 자동으로 호출된다.
     // 필터가 사용할 자원을 이 메서드에서 준비한다.
     // => 웹 애플리케이션을 시작할 때 필터는 자동 생성된다.
     System.out.println("Filter01.init()");
@@ -46,7 +55,7 @@ public class Filter01 implements Filter {
 
   @Override
   public void destroy() {
-    // 웹 애플리케이션이 종료될 때 호출된다.
+    // 웹 애플리케이션을 종료할 때 호출된다.
     // init()에서 준비한 자원을 해제한다.
     System.out.println("Filter01.destroy()");
   }
